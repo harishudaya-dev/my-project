@@ -1,0 +1,1800 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sri Muthukumaran Arts and Science College | SMASC</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-dark: #0B162C;
+            --accent-gold: #E4AC39;
+            --gold-muted: rgba(228, 172, 57, 0.15);
+            --navy-deep: #0A1F44;
+            --navy-form: #162A4E;
+            --input-bg: #0B162C;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--primary-dark);
+            color: white;
+            line-height: 1.6;
+        }
+
+
+
+        .text-gold {
+            color: var(--accent-gold) !important;
+        }
+
+        .bg-gold {
+            background-color: var(--accent-gold) !important;
+        }
+
+        .bg-navy-deep {
+            background-color: var(--navy-deep) !important;
+        }
+
+        .bg-navy-form {
+            background-color: var(--navy-form) !important;
+        }
+
+        .bg-input {
+            background-color: var(--input-bg) !important;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(11, 22, 44, 0.85) 0%, rgba(11, 22, 44, 0.92) 100%);
+        }
+
+        .section-padding {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        .feature-card {
+            background: #0b162cf2;
+            border: 1px solid #f1f5f9;
+            border-radius: 1rem;
+            padding: 2.5rem;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .feature-card:hover {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        }
+
+        .program-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .program-card:hover {
+            background-color: #f8fafc;
+        }
+
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1.5rem;
+            padding: 3rem;
+            position: relative;
+            max-height: 500px;
+            height: 300px;
+        }
+
+        .faq-card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 1rem;
+            overflow: hidden;
+            margin-bottom: 0.75rem;
+        }
+
+        .form-control-custom {
+            background-color: var(--input-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 0.75rem;
+            color: white;
+            padding: 1rem;
+        }
+
+        .form-control-custom:focus {
+            background-color: var(--input-bg);
+            border-color: rgba(228, 172, 57, 0.5);
+            color: white;
+            box-shadow: 0 0 0 0.25rem rgba(228, 172, 57, 0.25);
+        }
+
+        .form-control-custom::placeholder {
+            color: rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-gold {
+            background-color: var(--accent-gold);
+            color: var(--primary-dark);
+            font-weight: 700;
+            padding: 0.75rem 2rem;
+            border-radius: 0.5rem;
+            border: none;
+        }
+
+        .btn-gold:hover {
+            background-color: #D4A030;
+            color: var(--primary-dark);
+        }
+
+        .btn-outline-gold {
+            border: 1px solid rgba(228, 172, 57, 0.4);
+            color: var(--accent-gold);
+            font-weight: 700;
+            padding: 0.75rem 2rem;
+            border-radius: 0.5rem;
+            background: transparent;
+        }
+
+        .btn-outline-gold:hover {
+            background-color: rgba(228, 172, 57, 0.1);
+            color: var(--accent-gold);
+            border-color: var(--accent-gold);
+        }
+
+        .nav-link-custom {
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+        }
+
+        .nav-link-custom:hover {
+            color: var(--accent-gold);
+        }
+
+        .facility-icon {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            background-color: #0b162cf2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+        }
+
+        .facility-card {
+            background: white;
+            border: 1px solid #f1f5f9;
+            border-radius: 1rem;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .facility-card:hover {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        }
+
+        .pulse-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: var(--accent-gold);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .badge-admission {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(228, 172, 57, 0.4);
+            border-radius: 50px;
+            padding: 0.5rem 1.5rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .campus-image {
+            border-radius: 1.5rem;
+            overflow: hidden;
+            height: 400px;
+            position: relative;
+        }
+
+        .campus-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.7s ease;
+        }
+
+        .campus-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .campus-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+            padding: 2.5rem;
+        }
+
+        .h-clr {
+            color: #E4AC39;
+        }
+
+        .s-clr {
+            color: #162A4E;
+        }
+
+        .bg-gld {
+            background-color: #eee1bc;
+        }
+
+        .text-mted {
+            --bs-text-opacity: 1;
+            color: #283c50bf;
+        }
+
+        @media (max-width: 768px) {
+            .section-padding {
+                padding-top: 4rem;
+                padding-bottom: 4rem;
+            }
+
+            .campus-image {
+                height: 300px;
+                margin-bottom: 1.5rem;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .testimonial-card {
+                max-height: 800px;
+                height: 480px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+        }
+
+        /* Testimonial Card */
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 1.5rem;
+            position: relative;
+            height: 100%;
+            min-height: 280px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-3px);
+        }
+
+        /* Carousel Item */
+        .carousel-item {
+            padding: 0 10px;
+        }
+
+        /* Carousel Controls - Desktop Only */
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 50px;
+            height: 50px;
+            background: rgba(212, 175, 55, 0.15);
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 1;
+            transition: all 0.3s ease;
+        }
+
+        .carousel-control-prev:hover,
+        .carousel-control-next:hover {
+            background: rgba(212, 175, 55, 0.25);
+        }
+
+        .carousel-control-prev {
+            left: -25px;
+        }
+
+        .carousel-control-next {
+            right: -25px;
+        }
+
+        /* Carousel Indicators */
+        .carousel-indicators {
+            position: relative;
+            margin-bottom: 0;
+            bottom: 0;
+        }
+
+        .carousel-indicators button {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.3);
+            border: none;
+            margin: 0 4px;
+            transition: all 0.3s ease;
+        }
+
+        .carousel-indicators button.active {
+            background-color: #D4AF37;
+            width: 10px;
+            height: 10px;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .testimonial-card {
+                padding: 1.25rem;
+                min-height: 320px;
+            }
+
+            .testimonial-card p {
+                font-size: 0.95rem;
+                line-height: 1.5;
+            }
+
+            .carousel-item {
+                padding: 0 15px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .testimonial-card {
+                padding: 1rem;
+            }
+
+            h2.display-5 {
+                font-size: 1.75rem;
+            }
+        }
+
+        /* Touch-friendly */
+        .carousel-item {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .section-cta {
+            text-align: center;
+            margin-top: 1rem;
+            padding: 2rem 1rem;
+        }
+
+        .section-cta .btn-admission {
+            background: linear-gradient(135deg, #E4AC39 0%, #D4A030 100%);
+            color: #0B162C;
+            font-weight: 700;
+            font-size: 1.1rem;
+            padding: 0.9rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            box-shadow: 0 8px 25px rgba(228, 172, 57, 0.35);
+            transition: all 0.3s ease;
+        }
+
+        .section-cta .btn-admission:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(228, 172, 57, 0.45);
+            background: linear-gradient(135deg, #F0C14B 0%, #E4AC39 100%);
+        }
+
+        .section-cta .btn-admission i {
+            margin-right: 0.5rem;
+        }
+
+        /* Make it slightly smaller on mobile */
+        @media (max-width: 576px) {
+            .section-cta {
+                margin-top: 2.5rem;
+                padding: 1.5rem 1rem;
+            }
+
+            .section-cta .btn-admission {
+                font-size: 1rem;
+                padding: 0.85rem 2.2rem;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .display-1 {
+                font-size: 3rem;
+            }
+        }
+
+        .bg-light {
+            --bs-bg-opacity: 1;
+            background-color: rgb(214 222 230) !important;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header/Navigation -->
+    <header class="sticky-top"
+        style="background-color: rgba(11, 22, 44, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
+        <div class="container">
+            <nav class="navbar navbar-expand-xl py-3">
+                <div class="container-fluid">
+                    <div class="d-flex align-items-center">
+                        <div class=" me-3">
+                            <img src="images/logo.png" alt="Sri Muthukumaran Arts and Science College Logo"
+                                style="width: 220px; height: 100%; object-fit: contain; padding: 4px;">
+                        </div>
+                    </div>
+
+                    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon text-white">
+
+                        </span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                            <!-- <li class="nav-item">
+                                <a class="nav-link nav-link-custom" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-link-custom" href="#">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-link-custom" href="#">Programmes</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-link-custom" href="#">Campus</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-link-custom" href="#">Testimonials</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-link-custom" href="#">FAQ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-link-custom" href="#">Admissions</a>
+                            </li> -->
+                        </ul>
+
+                        <button class="btn btn-gold fw-bold">Admission</button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="position-relative min-vh-90 d-flex align-items-center justify-content-center overflow-hidden">
+        <div class="position-absolute top-0 start-0 w-100 h-100 bg-cover bg-center"
+            style="background-image: url('images/landing/1.png');">
+        </div>
+        <div class="position-absolute top-0 start-0 w-100 h-100 hero-gradient"></div>
+
+        <div class="container position-relative z-1 py-5">
+            <div class="row justify-content-between align-items-center g-5">
+                <!-- Left Column: Hero Text + Stats -->
+                <div class="col-lg-6 text-lg-start">
+                    <div class="badge-admission mb-4">
+                        <span class="pulse-dot"></span>
+                        <span class="text-gold text-uppercase fw-semibold"
+                            style="font-size: 0.75rem; letter-spacing: 0.2em;">Admissions Open 2026-2027</span>
+                    </div>
+
+                    <h1 class="font-serif text-white hero-title display-1 fw-bold mb-3">
+                        Sri Muthukumaran<br>
+                        <span class="text-gold fst-italic fw-bold">Arts & Science College</span>
+                    </h1>
+
+                    <p class="text-gold fw-medium text-uppercase mb-4"
+                        style="opacity: 0.8; letter-spacing: 0.1em; font-size: 0.875rem;">
+                        Affiliated to the University of Madras | Established in 2001
+                    </p>
+
+                    <p class="text-white fs-4 mb-5 opacity-90 fw-light" style="letter-spacing: 0.025em;">
+                        Shaping Knowledge. Building Careers.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="d-flex flex-column flex-md-row justify-content-start gap-3 mb-5">
+                        <button class="btn btn-gold fw-bold py-3 px-5 fs-5">Admission Enquiry</button>
+                        <!-- Uncomment if you want secondary button -->
+                        <!-- <button class="btn btn-outline-gold fw-bold py-3 px-5 fs-5 d-flex align-items-center justify-content-center gap-2">
+                    Explore Programmes
+                    <i class="bi bi-chevron-double-down"></i>
+                </button> -->
+                    </div>
+
+                    <!-- Stats -->
+                    <div class="row border-top border-bottom border-white-10 py-4">
+                        <div class="col-6 col-md-3 text-center mb-4 mb-md-0">
+                            <div class="stat-number text-gold mb-1">20+</div>
+                            <div class="text-uppercase text-white-60"
+                                style="font-size: 0.75rem; letter-spacing: 0.1em;">
+                                Years of Excellence
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3 text-center mb-4 mb-md-0">
+                            <div class="stat-number text-gold mb-1">100+</div>
+                            <div class="text-uppercase text-white-60"
+                                style="font-size: 0.75rem; letter-spacing: 0.1em;">
+                                Expert Faculty
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3 text-center">
+                            <div class="stat-number text-gold mb-1">14+</div>
+                            <div class="text-uppercase text-white-60"
+                                style="font-size: 0.75rem; letter-spacing: 0.1em;">
+                                Programmes
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3 text-center">
+                            <div class="stat-number text-gold mb-1">30+</div>
+                            <div class="text-uppercase text-white-60"
+                                style="font-size: 0.75rem; letter-spacing: 0.1em;">
+                                Facilities
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Admission Form -->
+                <div class="col-lg-6">
+                    <div class="bg-navy-form p-4 p-lg-5 rounded-4 shadow-lg border border-gold border-opacity-25">
+                        <h3 class="font-serif text-gold fw-bold mb-4 text-center">Quick Admission Enquiry 2026-2027</h3>
+                        <form id="heroAdmissionForm">
+
+                            <!-- Full Name -->
+                            <div class="mb-3">
+                                <label class="form-label text-white fw-medium small">Full Name *</label>
+                                <input type="text" id="fullName" class="form-control form-control-custom"
+                                    placeholder="Enter your full name" required>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="mb-3">
+                                <label class="form-label text-white fw-medium small">Email Address *</label>
+                                <input type="email" id="email" class="form-control form-control-custom"
+                                    placeholder="your.email@example.com" required>
+                            </div>
+
+                            <!-- Phone Number -->
+                            <div class="mb-3">
+                                <label class="form-label text-white fw-medium small">Phone Number *</label>
+                                <input type="tel" id="phone" class="form-control form-control-custom"
+                                    placeholder="+91 XXXXX XXXXX" maxlength="10" required>
+                            </div>
+
+                            <!-- Programme -->
+                            <div class="mb-4">
+                                <label class="form-label text-white fw-medium small">Programme Interested In *</label>
+                                <select id="programme" class="form-select form-control-custom" required>
+                                    <option value="">Select Programme</option>
+                                    <option value="ba-english">B.A. English</option>
+                                    <option value="ba-tamil">B.A. Tamil</option>
+                                    <option value="bsc-mathematics">B.Sc. Mathematics</option>
+                                    <option value="bsc-physics">B.Sc. Physics</option>
+                                    <option value="bsc-computer-science">B.Sc. Computer Science</option>
+                                    <option value="bca">B.C.A.</option>
+                                    <option value="bcom-general">B.Com. General</option>
+                                    <option value="bba">B.B.A.</option>
+                                    <option value="mcom">M.Com.</option>
+                                </select>
+                            </div>
+
+                            <!-- Submit -->
+                            <button type="submit"
+                                class="btn btn-gold w-100 py-3 fw-bold fs-5 d-flex align-items-center justify-content-center gap-2">
+                                <i class="bi bi-send-fill"></i> Submit Enquiry
+                            </button>
+
+                        </form>
+
+                        <!-- Optional success message (show via JS after submit) -->
+                        <div id="heroFormSuccess" class="text-center text-gold fw-bold mt-4 fs-5 d-none">
+                            Thank you! Our admissions team will contact you soon.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="row justify-content-between align-items-center g-5 mb-5">
+                <!-- Left Column: Text Content -->
+                <div class="col-lg-6">
+                    <p class="text-gold fw-bold text-uppercase mb-2" style="letter-spacing: 0.3em; font-size: 0.75rem;">
+                        WHY CHOOSE US
+                    </p>
+                    <h2 class="s-clr font-serif text-navy-deep display-4 fw-bold mb-3">
+                        Excellence in Every Dimension
+                    </h2>
+                    <p class="text-mted fs-5">
+                        Sri Muthukumaran Arts and Science College is a premier institution committed to academic
+                        excellence, holistic development, and career-oriented education. Established in 2001 and
+                        affiliated to the prestigious University of Madras, the college offers a dynamic learning
+                        environment supported by experienced faculty, modern infrastructure, and student-centric
+                        teaching methods.<br><br>
+                        With a strong academic foundation, industry-relevant programmes, and a vibrant campus life,
+                        the college prepares students to succeed in today’s competitive world.
+                    </p>
+                </div>
+
+                <!-- Right Column: Campus Image -->
+                <div class="col-lg-6">
+                    <div class="campus-image"
+                        style="height: 500px; border-radius: 1.5rem; overflow: hidden; position: relative;">
+                        <img src="images/landing/1.png" alt="Sri Muthukumaran Arts and Science College Campus"
+                            style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s ease;">
+                        <!-- Optional overlay text for visual appeal -->
+                        <div class="campus-overlay d-flex align-items-end p-4"
+                            style="background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 60%);">
+                            <div>
+                                <h4 class="font-serif fw-bold text-white mb-1 fs-3">
+                                    Our Vibrant Campus
+                                </h4>
+                                <p class="text-gold fw-medium mb-0">
+                                    Modern facilities in a serene environment
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card">
+                        <div class="facility-icon mb-4">
+                            <i class="bi bi-award fs-3 text-gold"></i>
+                        </div>
+                        <h4 class="h-clr font-serif fw-bold text-navy-deep fs-3 mb-3">University Affiliation
+                        </h4>
+                        <p class="text-muted">
+                            Affiliated to the University of Madras
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card">
+                        <div class="facility-icon mb-4">
+                            <i class="bi bi-people fs-3 text-gold"></i>
+                        </div>
+                        <h4 class="h-clr font-serif fw-bold text-navy-deep fs-3 mb-3">100+ Expert Faculty</h4>
+                        <p class="text-muted">
+                            100+ Experienced and Qualified Faculty Members
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card">
+                        <div class="facility-icon mb-4">
+                            <i class="bi bi-journal-text fs-3 text-gold"></i>
+                        </div>
+                        <h4 class="h-clr font-serif fw-bold text-navy-deep fs-3 mb-3">14+ Programmes</h4>
+                        <p class="text-muted">
+                            14+ Undergraduate & Postgraduate Programmes
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card">
+                        <div class="facility-icon mb-4">
+                            <i class="bi bi-mortarboard fs-3 text-gold"></i>
+                        </div>
+                        <h4 class="h-clr font-serif fw-bold text-navy-deep fs-3 mb-3">Academic Distinction</h4>
+                        <p class="text-muted">
+                            30+ Academic, Sports & Student Facilities
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card">
+                        <div class="facility-icon mb-4">
+                            <i class="bi bi-hand-thumbs-up fs-3 text-gold"></i>
+                        </div>
+                        <h4 class="h-clr font-serif fw-bold text-navy-deep fs-3 mb-3">Placement Success</h4>
+                        <p class="text-muted">
+                            Student-Focused Teaching & Mentorship
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card">
+                        <div class="facility-icon mb-4">
+                            <i class="bi bi-lightbulb fs-3 text-gold"></i>
+                        </div>
+                        <h4 class="h-clr font-serif fw-bold text-navy-deep fs-3 mb-3">Holistic Learning</h4>
+                        <p class="text-muted">
+                            Career Guidance & Skill Development Support
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-cta">
+                <a href="#" class="btn btn-admission">
+                    Enquire Now <i class="bi bi-arrow-right-circle-fill"></i>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Programmes Section -->
+    <section class="section-padding bg-white">
+        <div class="container">
+            <div class="row justify-content-center mb-3">
+                <div class="col-12 text-center">
+                    <h2 class="h-clr font-serif text-navy-deep display-4 fw-bold mb-2">Academic Programmes Offered</h2>
+                </div>
+            </div>
+
+            <!-- All Programmes Grid -->
+            <div class="row g-4">
+                <!-- Arts & Science -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="h-100 bg-light rounded-4 p-4 position-relative overflow-hidden">
+                        <!-- Decorative Accent -->
+                        <div class="position-absolute top-0 start-0 w-100"
+                            style="height: 4px; background: linear-gradient(90deg, #D4AF37 0%, #003366 100%);"></div>
+
+                        <div class="mb-4">
+                            <div class="rounded-circle bg-navy-deep d-inline-flex align-items-center justify-content-center mb-3"
+                                style="width: 56px; height: 56px;">
+                                <i class="bi bi-layers fs-4 text-white"></i>
+                            </div>
+                            <h3 class="font-serif fw-bold text-navy-deep fs-4 mb-2"
+                                style="font-size: 20px !important; color: #162A4E;">Arts & Science</h3>
+                            <p class="text-gold fw-bold text-uppercase mb-0"
+                                style="font-size: 0.75rem; letter-spacing: 0.1em;">
+                                Undergraduate Programmes
+                            </p>
+                        </div>
+
+                        <div class="programme-list">
+                            <div class="d-flex align-items-start gap-3 mb-3">
+                                <div class="rounded-circle bg-gold flex-shrink-0 mt-1" style="width: 8px; height: 8px;">
+                                </div>
+                                <span class="text-navy-deep" style="color: #162A4E;">B.A. English</span>
+                            </div>
+                            <div class="d-flex align-items-start gap-3 mb-3">
+                                <div class="rounded-circle bg-gold flex-shrink-0 mt-1" style="width: 8px; height: 8px;">
+                                </div>
+                                <span class="text-navy-deep" style="color: #162A4E;">B.A. Tamil</span>
+                            </div>
+                            <div class="d-flex align-items-start gap-3 mb-3">
+                                <div class="rounded-circle bg-gold flex-shrink-0 mt-1" style="width: 8px; height: 8px;">
+                                </div>
+                                <span class="text-navy-deep" style="color: #162A4E;">B.Sc. (Mathematics)</span>
+                            </div>
+                            <div class="d-flex align-items-start gap-3 mb-3">
+                                <div class="rounded-circle bg-gold flex-shrink-0 mt-1" style="width: 8px; height: 8px;">
+                                </div>
+                                <span class="text-navy-deep" style="color: #162A4E;">B.Sc. (Physics)</span>
+                            </div>
+                            <div class="d-flex align-items-start gap-3 mb-3">
+                                <div class="rounded-circle bg-gold flex-shrink-0 mt-1" style="width: 8px; height: 8px;">
+                                </div>
+                                <span class="text-navy-deep" style="color: #162A4E;">B.Sc. (Computer Science)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Commerce & Management -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="h-100 bg-light rounded-4 p-4 position-relative overflow-hidden">
+                        <!-- Decorative Accent -->
+                        <div class="position-absolute top-0 start-0 w-100"
+                            style="height: 4px; background: linear-gradient(90deg, #D4AF37 0%, #003366 100%);"></div>
+
+                        <div class="mb-4">
+                            <div class="rounded-circle bg-navy-deep d-inline-flex align-items-center justify-content-center mb-3"
+                                style="width: 56px; height: 56px;">
+                                <i class="bi bi-briefcase fs-4 text-white"></i>
+                            </div>
+                            <h3 class="font-serif fw-bold text-navy-deep fs-4 mb-2"
+                                style="font-size: 20px !important; color: #162A4E;">Commerce & Management</h3>
+                            <p class="text-gold fw-bold text-uppercase mb-0"
+                                style="font-size: 0.75rem; letter-spacing: 0.1em;">
+                                Undergraduate Programmes
+                            </p>
+                        </div>
+
+                        <div class="programme-list">
+                            <div class="d-flex align-items-start gap-3 mb-3">
+                                <div class="rounded-circle bg-gold flex-shrink-0 mt-1" style="width: 8px; height: 8px;">
+                                </div>
+                                <span class="text-navy-deep" style="color: #162A4E;">B.Com. (General)</span>
+                            </div>
+                            <div class="d-flex align-items-start gap-3 mb-3">
+                                <div class="rounded-circle bg-gold flex-shrink-0 mt-1" style="width: 8px; height: 8px;">
+                                </div>
+                                <span class="text-navy-deep" style="color: #162A4E;">B.Com. (Accounting &
+                                    Finance)</span>
+                            </div>
+                            <div class="d-flex align-items-start gap-3 mb-3">
+                                <div class="rounded-circle bg-gold flex-shrink-0 mt-1" style="width: 8px; height: 8px;">
+                                </div>
+                                <span class="text-navy-deep" style="color: #162A4E;">B.Com. (Corporate
+                                    Secretaryship)</span>
+                            </div>
+                            <div class="d-flex align-items-start gap-3 mb-3">
+                                <div class="rounded-circle bg-gold flex-shrink-0 mt-1" style="width: 8px; height: 8px;">
+                                </div>
+                                <span class="text-navy-deep" style="color: #162A4E;">B.Com. (Computer
+                                    Applications)</span>
+                            </div>
+                            <div class="d-flex align-items-start gap-3 mb-3">
+                                <div class="rounded-circle bg-gold flex-shrink-0 mt-1" style="width: 8px; height: 8px;">
+                                </div>
+                                <span class="text-navy-deep" style="color: #162A4E;">BBA (Business
+                                    Administration)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Computer Applications -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="h-100 bg-light rounded-4 p-4 position-relative overflow-hidden">
+                        <!-- Decorative Accent -->
+                        <div class="position-absolute top-0 start-0 w-100"
+                            style="height: 4px; background: linear-gradient(90deg, #D4AF37 0%, #003366 100%);"></div>
+
+                        <div class="mb-4">
+                            <div class="rounded-circle bg-navy-deep d-inline-flex align-items-center justify-content-center mb-3"
+                                style="width: 56px; height: 56px;">
+                                <i class="bi bi-pc-display fs-4 text-white"></i>
+                            </div>
+                            <h3 class="font-serif fw-bold text-navy-deep fs-4 mb-2"
+                                style="font-size: 20px !important; color: #162A4E;">Computer Applications</h3>
+                            <p class="text-gold fw-bold text-uppercase mb-0"
+                                style="font-size: 0.75rem; letter-spacing: 0.1em;">
+                                Undergraduate Programmes
+                            </p>
+                        </div>
+
+                        <div class="programme-list">
+                            <div class="d-flex align-items-start gap-3 mb-3">
+                                <div class="rounded-circle bg-gold flex-shrink-0 mt-1" style="width: 8px; height: 8px;">
+                                </div>
+                                <span class="text-navy-deep" style="color: #162A4E;">BCA (Computer Applications)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Postgraduate -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="h-100 bg-light rounded-4 p-4 position-relative overflow-hidden">
+                        <!-- Decorative Accent -->
+                        <div class="position-absolute top-0 start-0 w-100"
+                            style="height: 4px; background: linear-gradient(90deg, #D4AF37 0%, #003366 100%);"></div>
+
+                        <div class="mb-4">
+                            <div class="rounded-circle bg-navy-deep d-inline-flex align-items-center justify-content-center mb-3"
+                                style="width: 56px; height: 56px;">
+                                <i class="bi bi-mortarboard fs-4 text-white"></i>
+                            </div>
+                            <h3 class="font-serif fw-bold text-navy-deep fs-4 mb-2"
+                                style="font-size: 20px !important; color: #162A4E;">Commerce</h3>
+                            <p class="text-gold fw-bold text-uppercase mb-0"
+                                style="font-size: 0.75rem; letter-spacing: 0.1em;">
+                                Postgraduate Programmes
+                            </p>
+                        </div>
+
+                        <div class="programme-list">
+                            <div class="d-flex align-items-start gap-3 mb-3">
+                                <div class="rounded-circle bg-gold flex-shrink-0 mt-1" style="width: 8px; height: 8px;">
+                                </div>
+                                <span class="text-navy-deep" style="color: #162A4E;">M.Com (General)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Add here -->
+            <div class="section-cta">
+                <a href="#" class="btn btn-admission">
+                    <i class="bi bi-arrow-right-circle-fill"></i> Admission Open 2026-2027 – Apply Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Campus & Facilities Section -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="row justify-content-center mb-3">
+                <div class="col-12 text-center">
+                    <p class="text-gold fw-bold text-uppercase mb-2" style="letter-spacing: 0.3em; font-size: 0.75rem;">
+                        INFRASTRUCTURE</p>
+                    <h2 class="h-clr text-navy-deep display-5 fw-bold">Campus & Facilities</h2>
+                    <!-- <p class="text-muted fs-5 mx-auto mt-3" style="max-width: 700px;">
+                        A campus designed for learning and growth, equipped with modern infrastructure and world-class
+                        amenities.
+                    </p> -->
+                </div>
+            </div>
+
+            <!-- Campus Images -->
+            <div class="row mb-5">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <div class="campus-image">
+                        <img src="images/b9.jpg" alt="Smart Classrooms">
+                        <div class="campus-overlay">
+                            <h4 class="font-serif fw-bold text-white fs-3 mb-1">Smart Classrooms</h4>
+                            <p class="text-gold fw-medium">Interactive learning environment</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="campus-image">
+                        <img src="images/landing/computer-lab.jpeg" alt="Computer Labs">
+                        <div class="campus-overlay">
+                            <h4 class="font-serif fw-bold text-white fs-3 mb-1">Computer Labs</h4>
+                            <p class="text-gold fw-medium">Latest technology & software</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Facilities Grid -->
+            <div class="row g-4">
+                <div class="col-sm-6 col-md-4 col-lg-2">
+                    <div class="facility-card">
+                        <div class="facility-icon">
+                            <i class="bi bi-book fs-4 text-gold"></i>
+                        </div>
+                        <h5 class="s-clr fw-bold text-navy-deep mb-2">100,000+ Books</h5>
+                        <p class="text-mted small">Library ith reference journals and digital resources</p>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-2">
+                    <div class="facility-card">
+                        <div class="facility-icon">
+                            <i class="bi bi-door-open fs-4 text-gold"></i>
+                        </div>
+                        <h5 class="s-clr fw-bold text-navy-deep mb-2">Modern Classrooms</h5>
+                        <p class="text-mted small">Well-equipped classrooms and laboratories</p>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-2">
+                    <div class="facility-card">
+                        <div class="facility-icon">
+                            <i class="bi bi-pc-display fs-4 text-gold"></i>
+                        </div>
+                        <h5 class="s-clr fw-bold text-navy-deep mb-2">Computer Labs</h5>
+                        <p class="text-mted small">Computer labs with updated software</p>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-2">
+                    <div class="facility-card">
+                        <div class="facility-icon">
+                            <i class="bi bi-trophy fs-4 text-gold"></i>
+                        </div>
+                        <h5 class="s-clr fw-bold text-navy-deep mb-2">10 Sports Teams</h5>
+                        <p class="text-mted small">10 Active Sports Teams promoting fitness and teamwork</p>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-2">
+                    <div class="facility-card">
+                        <div class="facility-icon">
+                            <i class="bi bi-people fs-4 text-gold"></i>
+                        </div>
+                        <h5 class="s-clr fw-bold text-navy-deep mb-2">Student Clubs</h5>
+                        <p class="text-mted small"> Student activity clubs and cultural forums</p>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-2">
+                    <div class="facility-card">
+                        <div class="facility-icon">
+                            <i class="bi bi-bus-front fs-4 text-gold"></i>
+                        </div>
+                        <h5 class="s-clr fw-bold text-navy-deep mb-2">Transportation</h5>
+                        <p class="text-mted small">Transportation and essential campus amenities</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Holistic Student Development Section -->
+    <section class="section-padding bg-white">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <!-- Content Column -->
+                <div class="col-lg-6">
+                    <!-- <p class="text-gold fw-bold text-uppercase mb-2" style="letter-spacing: 0.3em; font-size: 0.75rem;">
+                        STUDENT DEVELOPMENT
+                    </p> -->
+                    <h2 class="h-clr font-serif text-navy-deep display-5 fw-bold mb-4">
+                        Holistic Student Development
+                    </h2>
+                    <p class="text-mted fs-5 mb-4">
+                        Sri Muthukumaran Arts and Science College focuses on overall personality development through:
+                    </p>
+
+                    <!-- Development Points -->
+                    <div class="row g-3 mb-4">
+                        <div class="col-12">
+                            <div class="d-flex align-items-start gap-3">
+                                <div class="rounded-circle bg-gold d-flex align-items-center justify-content-center"
+                                    style="width: 24px; height: 24px; flex-shrink: 0; margin-top: 2px;">
+                                    <i class="bi bi-check-lg text-white" style="font-size: 0.75rem;"></i>
+                                </div>
+                                <div>
+                                    <h5 class="s-clr fw-bold text-navy-deep mb-1">Skill Development Programs</h5>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="d-flex align-items-start gap-3">
+                                <div class="rounded-circle bg-gold d-flex align-items-center justify-content-center"
+                                    style="width: 24px; height: 24px; flex-shrink: 0; margin-top: 2px;">
+                                    <i class="bi bi-check-lg text-white" style="font-size: 0.75rem;"></i>
+                                </div>
+                                <div>
+                                    <h5 class="s-clr fw-bold text-navy-deep mb-1">Seminars, Workshops & Guest Lectures
+                                    </h5>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="d-flex align-items-start gap-3">
+                                <div class="rounded-circle bg-gold d-flex align-items-center justify-content-center"
+                                    style="width: 24px; height: 24px; flex-shrink: 0; margin-top: 2px;">
+                                    <i class="bi bi-check-lg text-white" style="font-size: 0.75rem;"></i>
+                                </div>
+                                <div>
+                                    <h5 class="s-clr fw-bold text-navy-deep mb-1">Sports, Cultural Events & Competitions
+                                    </h5>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="d-flex align-items-start gap-3">
+                                <div class="rounded-circle bg-gold d-flex align-items-center justify-content-center"
+                                    style="width: 24px; height: 24px; flex-shrink: 0; margin-top: 2px;">
+                                    <i class="bi bi-check-lg text-white" style="font-size: 0.75rem;"></i>
+                                </div>
+                                <div>
+                                    <h5 class="s-clr fw-bold text-navy-deep mb-1">Leadership & Communication Training
+                                    </h5>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-gold fw-bold px-4 py-3">
+                        Enroll Now <i class="bi bi-arrow-right ms-2"></i>
+                    </button>
+                </div>
+
+                <!-- Image Column -->
+                <div class="col-lg-6">
+                    <div class="campus-image h-100" style="height: 550px;">
+                        <img src="images/internet_of_things/4.png" alt="Student Development Activities">
+                        <div class="campus-overlay">
+                            <h4 class="font-serif fw-bold text-white fs-3 mb-1">Student Activities & Events</h4>
+                            <p class="text-gold fw-medium">Building leaders for tomorrow</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section-padding bg-navy-deep">
+        <div class="container">
+            <div class="row justify-content-center mb-3">
+                <div class="col-12 text-center">
+                    <p class="text-gold fw-bold text-uppercase mb-2" style="letter-spacing: 0.3em; font-size: 0.75rem;">
+                        TESTIMONIALS</p>
+                    <h2 class="font-serif text-white display-5 fw-bold mb-4">Hear From Our Students</h2>
+                </div>
+            </div>
+
+            <!-- Testimonials Carousel -->
+            <div id="testimonialsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                <div class="carousel-inner">
+
+                    <!-- Slide 1 (Desktop: Cards 1 & 2, Mobile: Card 1) -->
+                    <div class="carousel-item active">
+                        <div class="row g-4">
+                            <!-- Card 1 - B.Com -->
+                            <div class="col-12 col-lg-6">
+                                <div class="testimonial-card h-100">
+
+                                    <div class="mb-3">
+                                        <div class="d-flex gap-1 mb-2">
+                                            <i class="bi bi-star-fill text-gold"></i>
+                                            <i class="bi bi-star-fill text-gold"></i>
+                                            <i class="bi bi-star-fill text-gold"></i>
+                                            <i class="bi bi-star-fill text-gold"></i>
+                                            <i class="bi bi-star-fill text-gold"></i>
+                                        </div>
+                                        <p class="fst-italic text-white opacity-90 mb-0">
+                                            "Sri Muthukumaran Arts and Science College gave me strong academic knowledge
+                                            and confidence. The faculty members are very supportive and always guide us
+                                            in academics and career planning."
+                                        </p>
+                                    </div>
+                                    <div class="border-top border-white border-opacity-10 pt-3 mt-3">
+                                        <h5 class="fw-bold text-white mb-1">B.Com Student</h5>
+                                        <p class="text-gold text-uppercase fw-bold small"
+                                            style="letter-spacing: 0.1em;">
+                                            B.Com (Accounting & Finance)
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 2 - B.Sc CS (Visible on desktop, hidden on mobile) -->
+                            <div class="col-lg-6 d-none d-lg-block">
+                                <div class="testimonial-card h-100">
+
+                                    <div class="mb-3">
+                                        <div class="d-flex gap-1 mb-2">
+                                            <i class="bi bi-star-fill text-gold"></i>
+                                            <i class="bi bi-star-fill text-gold"></i>
+                                            <i class="bi bi-star-fill text-gold"></i>
+                                            <i class="bi bi-star-fill text-gold"></i>
+                                            <i class="bi bi-star-fill text-gold"></i>
+                                        </div>
+                                        <p class="fst-italic text-white opacity-90 mb-0">
+                                            "The computer labs, library facilities, and teaching methods helped me build
+                                            technical skills. The college environment is friendly and motivating."
+                                        </p>
+                                    </div>
+                                    <div class="border-top border-white border-opacity-10 pt-3 mt-3">
+                                        <h5 class="fw-bold text-white mb-1">B.Sc Computer Science Student</h5>
+                                        <p class="text-gold text-uppercase fw-bold small"
+                                            style="letter-spacing: 0.1em;">
+                                            B.Sc (Computer Science)
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 (Desktop: Cards 3 & 4, Mobile: Card 2) -->
+                    <div class="carousel-item">
+                        <div class="row g-4">
+                            <!-- Card 3 - BBA -->
+                            <div class="col-12 col-lg-6">
+                                <div class="testimonial-card h-100">
+
+                                    <div class="mb-3">
+                                        <div class="d-flex gap-1 mb-2">
+                                            <i class="bi bi-star-fill text-gold"></i>
+                                            <i class="bi bi-star-fill text-gold"></i>
+                                            <i class="bi bi-star-fill text-gold"></i>
+                                            <i class="bi bi-star-fill text-gold"></i>
+                                            <i class="bi bi-star-fill text-gold"></i>
+                                        </div>
+                                        <p class="fst-italic text-white opacity-90 mb-0">
+                                            "I improved my communication and leadership skills through seminars and
+                                            activities. The faculty encouraged us to think practically and
+                                            professionally."
+                                        </p>
+                                    </div>
+                                    <div class="border-top border-white border-opacity-10 pt-3 mt-3">
+                                        <h5 class="fw-bold text-white mb-1">B.B.A Student</h5>
+                                        <p class="text-gold text-uppercase fw-bold small"
+                                            style="letter-spacing: 0.1em;">
+                                            Bachelor of Business Administration
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 4 - Alumni (Visible on desktop, hidden on mobile) -->
+                            <div class="col-lg-6 d-none d-lg-block">
+                                <div class="testimonial-card h-100">
+
+                                    <div class="mb-3">
+                                        <div class="d-flex gap-1 mb-2">
+                                            <i class="bi bi-star-fill text-gold"></i>
+                                            <i class="bi bi-star-fill text-gold"></i>
+                                            <i class="bi bi-star-fill text-gold"></i>
+                                            <i class="bi bi-star-fill text-gold"></i>
+                                            <i class="bi bi-star-fill text-gold"></i>
+                                        </div>
+                                        <p class="fst-italic text-white opacity-90 mb-0">
+                                            "The foundation I received at Sri Muthukumaran Arts and Science College
+                                            helped me succeed in my career. The discipline and guidance shaped my
+                                            future."
+                                        </p>
+                                    </div>
+                                    <div class="border-top border-white border-opacity-10 pt-3 mt-3">
+                                        <h5 class="fw-bold text-white mb-1">Alumni</h5>
+                                        <p class="text-gold text-uppercase fw-bold small"
+                                            style="letter-spacing: 0.1em;">
+                                            Class of 2019
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Carousel Controls - Hidden on mobile, shown on desktop -->
+                <button class="carousel-control-prev d-none d-lg-flex" type="button"
+                    data-bs-target="#testimonialsCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next d-none d-lg-flex" type="button"
+                    data-bs-target="#testimonialsCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+
+                <!-- Carousel Indicators -->
+                <div class="carousel-indicators mt-4">
+                    <!-- Always show 2 indicators (for 2 slides total) -->
+                    <button type="button" data-bs-target="#testimonialsCarousel" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#testimonialsCarousel" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="row justify-content-center mb-3">
+                <div class="col-12 text-center">
+
+                    <h2 class="h-clr font-serif text-navy-deep display-5 fw-bold mb-4">Frequently Asked Questions</h2>
+                    <!-- <p class="text-muted fs-5">Find answers to common questions about our college.</p> -->
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="accordion" id="faqAccordion">
+                        <!-- FAQ 1 -->
+                        <div class="faq-card">
+                            <div class="accordion-item border-0">
+                                <h2 class="accordion-header">
+                                    <button
+                                        class="accordion-button collapsed p-4 fs-5 fw-bold font-serif text-navy-deep"
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                        1. Is Sri Muthukumaran Arts and Science College affiliated to a university?
+                                    </button>
+                                </h2>
+                                <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="pt-3 accordion-body text-muted p-4 pt-0">
+                                        Yes. Sri Muthukumaran Arts and Science College is affiliated to the University
+                                        of Madras, one of the oldest and most prestigious universities in India.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 2 -->
+                        <div class="faq-card">
+                            <div class="accordion-item border-0">
+                                <h2 class="accordion-header">
+                                    <button
+                                        class="accordion-button collapsed p-4 fs-5 fw-bold font-serif text-navy-deep"
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#faq8">
+                                        2. How can I apply for admission?
+                                    </button>
+                                </h2>
+                                <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="pt-3 accordion-body text-muted p-4 pt-0">
+                                        You can apply by contacting the admissions office directly or visiting the
+                                        college campus for application guidance and counselling.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 3 -->
+                        <div class="faq-card">
+                            <div class="accordion-item border-0">
+                                <h2 class="accordion-header">
+                                    <button
+                                        class="accordion-button collapsed p-4 fs-5 fw-bold font-serif text-navy-deep"
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                        3. What programmes are offered by the college?
+                                    </button>
+                                </h2>
+                                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="pt-3 accordion-body text-muted p-4 pt-0">
+                                        The college offers 14+ undergraduate and postgraduate programmes in Arts,
+                                        Science, Commerce, Management, and Computer Applications, including B.A., B.Sc.,
+                                        B.Com., B.B.A., B.C.A., and M.Com.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 4 -->
+                        <div class="faq-card">
+                            <div class="accordion-item border-0">
+                                <h2 class="accordion-header">
+                                    <button
+                                        class="accordion-button collapsed p-4 fs-5 fw-bold font-serif text-navy-deep"
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                        4. How experienced is the faculty?
+                                    </button>
+                                </h2>
+                                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="pt-3 accordion-body text-muted p-4 pt-0">
+                                        The institution has 100+ highly qualified and experienced faculty members who
+                                        focus on academic excellence, mentoring, and student development.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 5 -->
+                        <div class="faq-card">
+                            <div class="accordion-item border-0">
+                                <h2 class="accordion-header">
+                                    <button
+                                        class="accordion-button collapsed p-4 fs-5 fw-bold font-serif text-navy-deep"
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                        5. Does the college have good library facilities?
+                                    </button>
+                                </h2>
+                                <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="pt-3 accordion-body text-muted p-4 pt-0">
+                                        Yes. The college library houses 100,000+ books, along with journals, reference
+                                        materials, and academic resources to support student learning and research.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 6 -->
+                        <div class="faq-card">
+                            <div class="accordion-item border-0">
+                                <h2 class="accordion-header">
+                                    <button
+                                        class="accordion-button collapsed p-4 fs-5 fw-bold font-serif text-navy-deep"
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                                        6. Does the college offer career guidance?
+                                    </button>
+                                </h2>
+                                <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="pt-3 accordion-body text-muted p-4 pt-0">
+                                        Yes. The college supports students through career guidance, skill development
+                                        programs, seminars, and workshops to enhance employability and higher education
+                                        opportunities.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="bg-navy-form p-4 p-md-5  rounded-4 shadow-lg">
+                        <form>
+                            <div class="column g-4 mb-4">
+                                <div class="col-md-6" style="width: 100%;">
+                                    <label class="form-label text-white opacity-80 fw-medium">Full Name *</label>
+                                    <input type="text" class="form-control form-control-custom"
+                                        placeholder="Enter your full name" required>
+                                </div>
+                                <div class="col-md-6" style="width: 100%;">
+                                    <label class="form-label text-white opacity-80 fw-medium">Email Address *</label>
+                                    <input type="email" class="form-control form-control-custom"
+                                        placeholder="your.email@example.com" required>
+                                </div>
+                                <div class="col-md-6" style="width: 100%;">
+                                    <label class="form-label text-white opacity-80 fw-medium">Phone Number *</label>
+                                    <input type="tel" id="phone" class="form-control form-control-custom"
+                                        placeholder="+91 XXXXX XXXXX" maxlength="10" required>
+                                </div>
+                                <div class="col-md-6" style="width: 100%;">
+                                    <label class="form-label text-white opacity-80 fw-medium">Programme *</label>
+                                    <select class="form-select form-control-custom" required>
+                                        <option selected disabled value="">Select a programme</option>
+                                        <option value="ba-english">B.A. English</option>
+                                        <option value="ba-tamil">B.A. Tamil</option>
+                                        <option value="bsc-physics">B.Sc. Physics</option>
+                                        <option value="bsc-mathematics">B.Sc. Mathematics</option>
+                                        <option value="bsc-computer-science">B.Sc. Computer Science</option>
+                                        <option value="bcom-general">B.Com. (General)</option>
+                                        <option value="bcom-accounting-finance">B.Com. (Accounting & Finance)</option>
+                                        <option value="bcom-corporate-secretaryship">B.Com. (Corporate Secretaryship)
+                                        </option>
+                                        <option value="bcom-computer-applications">B.Com. (Computer Applications)
+                                        </option>
+                                        <option value="bba-business-administration">B.B.A. (Business Administration)
+                                        </option>
+                                        <option value="bca-computer-applications">B.C.A. (Computer Applications)
+                                        </option>
+                                        <option value="mcom-general">M.Com. (General)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- <div class="mb-4">
+                                <label class="form-label text-white opacity-80 fw-medium">Message (Optional)</label>
+                                <textarea class="form-control form-control-custom" rows="4"
+                                    placeholder="Any questions or additional information..."></textarea>
+                            </div> -->
+
+                            <button type="submit"
+                                class="btn btn-gold w-100 py-3 fw-bold fs-5 d-flex align-items-center justify-content-center gap-2">
+                                <i class="bi bi-send"></i>
+                                Submit Application
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark pb-3"
+        style="background-color: #050B16 !important; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+        <div class="container">
+
+
+            <div class="border-white border-opacity-5 pt-4">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="text-white opacity-50 small mb-2 mb-md-0">Copyrights © 2026 Sri Muthukumaran Arts and
+                            Science
+                            College. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <p class="text-white opacity-50 small">Affiliated to the University of Madras</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Admission Enquiry Modal -->
+    <div class="modal fade" id="admissionPopupModal" tabindex="-1" aria-labelledby="admissionPopupLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-md"> <!-- changed from modal-lg to modal-md -->
+            <div class="modal-content bg-navy-form border-0 shadow-lg" style="border-radius: 1rem; overflow: hidden;">
+                <div class="modal-header border-0 pb-2 pt-3 px-3">
+                    <h5 class="modal-title font-serif fw-bold text-gold fs-4" id="admissionPopupLabel">
+                        Admission 2026-2027
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body px-3 pb-3 pt-1">
+
+                    <form id="popupAdmissionForm">
+                        <div class="row g-2"> <!-- reduced gutter from g-3 to g-2 -->
+
+
+                            <!-- Full Name -->
+                            <div class="mb-3">
+                                <label class="form-label text-white fw-medium small">Full Name *</label>
+                                <input type="text" id="fullName" class="form-control form-control-custom"
+                                    placeholder="Enter your full name" required>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="mb-3">
+                                <label class="form-label text-white fw-medium small">Email Address *</label>
+                                <input type="email" id="email" class="form-control form-control-custom"
+                                    placeholder="your.email@example.com" required>
+                            </div>
+
+                            <!-- Phone Number -->
+                            <div class="mb-3">
+                                <label class="form-label text-white fw-medium small">Phone Number *</label>
+                                <input type="text" id="phone" class="form-control form-control-custom"
+                                    placeholder="Enter 10-digit Mobile Number" maxlength="10" inputmode="numeric"
+                                    pattern="[0-9]{10}" required>
+                            </div>
+
+                            <div class="col-12">
+                                <label class="form-label text-white fw-medium small mb-1">Programme *</label>
+                                <select class="form-select form-control-custom" name="program" required>
+                                    <option value="" selected disabled>Select programme</option>
+                                    <option value="ba-english">B.A. English</option>
+                                    <option value="ba-tamil">B.A. Tamil</option>
+                                    <option value="bsc-mathematics">B.Sc. Mathematics</option>
+                                    <option value="bsc-physics">B.Sc. Physics</option>
+                                    <option value="bsc-computer-science">B.Sc. Computer Science</option>
+                                    <option value="bca">BCA</option>
+                                    <option value="bcom-general">B.Com. General</option>
+                                    <option value="bcom-af">B.Com. A&F</option>
+                                    <option value="bcom-cs">B.Com. Computer Applications</option>
+                                    <option value="bba">BBA</option>
+                                    <option value="mcom">M.Com</option>
+                                </select>
+                            </div>
+                            <div class="col-12 mt-2"> <!-- reduced margin -->
+                                <button type="submit" class="btn btn-gold w-100 py-2 fw-bold fs-6">
+                                    <i class="bi bi-send-fill me-2"></i> Submit
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div id="formSuccessMessage" class="text-center text-gold fw-bold mt-3 fs-5 d-none">
+                        Thank you! We'll get in touch soon.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Add hover text gold class functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const hoverGoldLinks = document.querySelectorAll('.hover-text-gold');
+            hoverGoldLinks.forEach(link => {
+                link.addEventListener('mouseenter', function () {
+                    this.classList.add('text-gold');
+                });
+                link.addEventListener('mouseleave', function () {
+                    this.classList.remove('text-gold');
+                });
+            });
+        });
+    </script>
+
+    <script>
+        // Touch swipe support for mobile
+        document.addEventListener('DOMContentLoaded', function () {
+            const carousel = document.getElementById('testimonialsCarousel');
+            let touchStartX = 0;
+            let touchEndX = 0;
+
+            carousel.addEventListener('touchstart', function (e) {
+                touchStartX = e.changedTouches[0].screenX;
+            });
+
+            carousel.addEventListener('touchend', function (e) {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            });
+
+            function handleSwipe() {
+                const swipeThreshold = 50;
+
+                if (touchEndX < touchStartX - swipeThreshold) {
+                    // Swipe left - next slide
+                    const nextButton = carousel.querySelector('.carousel-control-next');
+                    if (nextButton) nextButton.click();
+                }
+
+                if (touchEndX > touchStartX + swipeThreshold) {
+                    // Swipe right - previous slide
+                    const prevButton = carousel.querySelector('.carousel-control-prev');
+                    if (prevButton) prevButton.click();
+                }
+            }
+
+            // For mobile, we need to handle slide navigation differently
+            // since the controls are hidden
+            const bsCarousel = new bootstrap.Carousel(carousel);
+
+            // Override swipe to use Bootstrap carousel methods
+            carousel.addEventListener('touchend', function (e) {
+                touchEndX = e.changedTouches[0].screenX;
+                const swipeThreshold = 50;
+
+                if (touchEndX < touchStartX - swipeThreshold) {
+                    bsCarousel.next();
+                }
+
+                if (touchEndX > touchStartX + swipeThreshold) {
+                    bsCarousel.prev();
+                }
+            }, { passive: true });
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const form = document.getElementById("heroAdmissionForm");
+            const phoneInput = document.getElementById("phone");
+
+            // ✅ Allow only numbers in mobile input
+            phoneInput.addEventListener("input", function () {
+                this.value = this.value.replace(/[^0-9]/g, "");
+            });
+
+            // ✅ Form Validation
+            form.addEventListener("submit", function (e) {
+
+                const fullName = document.getElementById("fullName").value.trim();
+                const email = document.getElementById("email").value.trim();
+                const phone = phoneInput.value.trim();
+                const programme = document.getElementById("programme").value;
+
+                // ❌ Empty check
+                if (fullName === "" || email === "" || phone === "" || programme === "") {
+                    alert("⚠️ Please fill all fields before submitting.");
+                    e.preventDefault();
+                    return;
+                }
+
+                // ❌ Phone must be exactly 10 digits
+                if (phone.length !== 10) {
+                    alert("📱 Mobile number must be exactly 10 digits.");
+                    e.preventDefault();
+                    return;
+                }
+
+                alert("✅ Form Submitted Successfully!");
+            });
+
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            const FIRST_DELAY_MS = 20 * 1000;
+            const STORAGE_KEY = 'admissionFormSubmitted';
+
+            const modalElement = document.getElementById('admissionPopupModal');
+            if (!modalElement) return;
+
+            const modal = new bootstrap.Modal(modalElement);
+            const form = document.getElementById('popupAdmissionForm');
+            const successMsg = document.getElementById('formSuccessMessage');
+
+            // ✅ Mobile Input Field
+            const mobileInput = document.getElementById("mobileNumber");
+
+            // ─── Only show popup if user has NEVER submitted before ───
+            if (localStorage.getItem(STORAGE_KEY)) return;
+
+            setTimeout(() => {
+                modal.show();
+            }, FIRST_DELAY_MS);
+
+            // ✅ MOBILE VALIDATION (Only digits + max 10)
+            if (mobileInput) {
+
+                // Allow only numbers while typing
+                mobileInput.addEventListener("input", function () {
+                    this.value = this.value.replace(/[^0-9]/g, "");
+
+                    // Stop more than 10 digits
+                    if (this.value.length > 10) {
+                        this.value = this.value.slice(0, 10);
+                    }
+                });
+            }
+
+            // ─── Form submission ──────────────────────────────────────────────
+            if (form) {
+                form.addEventListener('submit', function (e) {
+                    e.preventDefault();
+
+                    // ✅ Check mobile number length
+                    if (mobileInput.value.length !== 10) {
+                        alert("📱 Mobile number must be exactly 10 digits!");
+                        return;
+                    }
+
+                    // Success UI
+                    form.classList.add('d-none');
+                    successMsg.classList.remove('d-none');
+
+                    localStorage.setItem(STORAGE_KEY, 'true');
+
+                    setTimeout(() => {
+                        modal.hide();
+
+                        setTimeout(() => {
+                            form.classList.remove('d-none');
+                            form.reset();
+                            successMsg.classList.add('d-none');
+                        }, 600);
+
+                    }, 4000);
+                });
+            }
+
+            modalElement.addEventListener('hidden.bs.modal', function () {
+                localStorage.setItem(STORAGE_KEY, 'true');
+            });
+
+        });
+    </script>
+
+
+</body>
+
+</html>
